@@ -1,0 +1,6 @@
+{
+  "name": "Friendship Day Digital Scrapbook",
+  "description": "An interactive digital gift scrapbook and storybook with cute aesthetics, music, mini-games, customizable photos, and hidden surprises for Friendship Day.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

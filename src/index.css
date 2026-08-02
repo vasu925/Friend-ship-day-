@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-baloo {
+    font-family: 'Baloo 2', cursive, sans-serif;
+  }
+  .font-fredoka {
+    font-family: 'Fredoka', sans-serif;
+  }
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
+  }
+  .font-pacifico {
+    font-family: 'Pacifico', cursive;
+  }
+
+  /* Cute pastel pink & white striped background pattern */
+  .bg-pastel-stripes {
+    background-color: #fff0f5;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #ffe4e9 0,
+      #ffe4e9 20px,
+      #ffffff 20px,
+      #ffffff 40px
+    );
+  }
+
+  /* Polka dot background pattern option */
+  .bg-polka-dots {
+    background-color: #fff0f6;
+    background-image: radial-gradient(#ffb6c1 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+  }
+
+  /* Diary notebook line pattern */
+  .bg-diary-lines {
+    background-color: #fdfbf7;
+    background-image: linear-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 100% 28px;
+  }
+
+  /* Paper texture effect */
+  .paper-shadow {
+    box-shadow: 0 10px 25px -5px rgba(244, 114, 182, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  }
+
+  .polaroid-shadow {
+    box-shadow: 0 12px 30px -8px rgba(225, 29, 72, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 192, 203, 0.6);
+  }
+}
+
+/* Custom animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes bounceSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(244, 114, 182, 0.4); }
+  50% { box-shadow: 0 0 30px rgba(244, 114, 182, 0.8); }
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-40px) scale(1.1); opacity: 1; }
+  100% { transform: translateY(-80px) scale(0.9); opacity: 0; }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-bounce-soft {
+  animation: bounceSoft 2.5s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fce7f3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #f472b6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899;
+}
+
+/* Image protection against saving, dragging, and downloading */
+img {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+}
+
